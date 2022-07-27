@@ -1,0 +1,86 @@
+<!DOCTYPE html><html lang="zh"><!-- This web page is copied by the "https://bazhan.wang" --><head><meta charset="utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>在线拼图</title>
+    <meta name="description" content="在线将多张图片拼接成一张图片。可用于健康码、行程码、核酸检测结果拼图等。">
+    <meta name="keywords" content="">
+    <link rel="icon" href="favicon.ico">
+
+    
+    <meta name="renderer" content="webkit">
+    
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <link rel="stylesheet" href="https://cdn.staticfile.org/egjs-flicking/4.5.1/flicking.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+
+<div class="w-full relative bg-[#fff] text-[#333333]">
+    <div class="max-w-6xl mx-auto relative pt-2 pb-8 px-4 md:px-8">
+
+        <h1 class="text-center text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-wide my-6">在线拼图</h1>
+
+        <div class="flex justify-center items-center w-full mb-6">
+            <label for="select-imgs" class="flex flex-col justify-center items-center w-full h-64 bg-gray-50 rounded-lg border-2 border-gray-300 border-dashed cursor-pointer">
+                <div class="flex flex-col justify-center items-center pt-5 pb-6">
+                    <svg class="mb-3 w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+                    <p class="mb-2 text-sm text-gray-500"><span class="font-semibold">点击选择多张图片</span></p>
+                    <p class="text-xs text-gray-500">PNG 或者 JPG</p>
+                </div>
+                <input type="file" id="select-imgs" multiple="" accept="image/*" class="hidden">
+            </label>
+        </div>
+
+        <button id="download" type="button" class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">
+            下载图片
+        </button>
+
+        <canvas id="mycanvas" class="max-w-full mx-auto my-6"></canvas>
+
+        </div>
+
+        <div id="content">
+            <h2>功能介绍</h2>
+
+<p>在线将多张图片拼接成一张图片，并导出下载。无需本地安装软件。</p>
+
+<ul>
+<li>下载时，使用日期时间作为文件名，规避图片文件名相同造成的覆盖问题；也能省去一部覆盖确认操作<br>
+</li>
+<li>多语言支持<br>
+</li>
+</ul>
+
+<h2>使用场景</h2>
+
+<ul>
+<li>家庭多人核酸检测报告截图合成一张图片，方便上传到学校在线统计文档。<br>
+</li>
+<li>健康码、行程码、核酸检测历史、疫苗接种历史，多图合并成一张图片。<br>
+</li>
+</ul>
+
+
+
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/combineImages.js"></script>
+
+
+
+    </div>
+    <div class="mt-2 mb-1">CopyRight © <a href="https://github.com/luozhixiaowo/pintu">Miloce</a></div>
+</div>
+
+<script src="js/main.js" crossorigin="anonymous"></script>
+
+
+
+
+
+</body></html>
